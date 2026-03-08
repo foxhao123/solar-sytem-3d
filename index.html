@@ -472,8 +472,6 @@
         }
 
         function onMouseClick(event) {
-
-        function onMouseClick(event) {
             // Calculate mouse position in normalized device coordinates (-1 to +1) for both components
             mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
             mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
@@ -520,35 +518,6 @@
             // Highlight nav button
             updateNavHighlight(data.name);
         }
-
-        function showInfoPanel(data) {
-            document.getElementById('panelTitle').textContent = data.name;
-            document.getElementById('panelRadius').textContent = data.realRadius;
-            document.getElementById('panelOrbit').textContent = data.realPeriod || '-';
-            document.getElementById('panelDistance').textContent = data.realDistance;
-            document.getElementById('panelDesc').textContent = data.desc;
-            
-            document.getElementById('infoPanel').classList.add('active');
-        }
-
-        function closeInfoPanel() {
-            document.getElementById('infoPanel').classList.remove('active');
-        }
-
-        function resetView() {
-            isFocused = false;
-            focusedTarget = null;
-            isTransitioning = true;
-            
-            closeInfoPanel();
-            
-            // Set targets for reset animation
-            targetCameraPosition.set(0, 80, 120);
-            targetLookAt.set(0, 0, 0);
-            
-            controls.enablePan = true;
-        }
-
 
         function showInfoPanel(data) {
             document.getElementById('panelTitle').textContent = data.name;
