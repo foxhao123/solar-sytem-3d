@@ -1,3 +1,3 @@
 export default {
-  base: '/solar-system-3d/',
+  base: '/solar-sytem-3d/',
 }
