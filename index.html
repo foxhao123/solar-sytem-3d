@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>太阳系探索</title>
+    <script type="module" crossorigin src="/solar-sytem-3d/assets/index-B-QbS2ij.js"></script>
+    <link rel="stylesheet" crossorigin href="/solar-sytem-3d/assets/index-o55-5uX5.css">
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <div id="title">太阳系探索</div>
+
+    <!-- 速度 + 重置 -->
+    <div id="controls">
+      <label>公转速度</label>
+      <input id="speed-slider" type="range" min="0" max="10" step="0.1" value="1" />
+      <span id="speed-label">1.0x</span>
+      <div id="divider"></div>
+      <button id="reset-btn" title="回到全局视角">⊙ 全局</button>
+    </div>
+
+    <div id="labels"></div>
+
+    <!-- 左侧总览 -->
+    <div id="planet-list">
+      <div id="planet-list-title">太阳系天体</div>
+      <div id="planet-list-items"></div>
+    </div>
+
+    <!-- 右侧详情 -->
+    <div id="info-panel" class="hidden">
+      <button id="close-btn">✕</button>
+      <h2 id="planet-name"></h2>
+      <table id="planet-table"></table>
+      <p id="planet-desc"></p>
+    </div>
+
+  </body>
+</html>
